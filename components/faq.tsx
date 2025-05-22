@@ -50,7 +50,7 @@ export default function FaqSection() {
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex justify-between items-center text-left px-6 py-5 text-lg font-medium text-black"
+                  className="w-full flex justify-between items-center text-left px-6 py-5 text-m font-medium text-black"
                   aria-expanded={isOpen}
                 >
                   {faq.question}
