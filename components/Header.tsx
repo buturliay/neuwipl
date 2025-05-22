@@ -9,8 +9,8 @@ const navItems = [
   { name: 'JOIN', href: '#join' },
   { name: 'EBOARD', href: '#eboard' },
   { name: 'CALENDAR', href: '#calendar' },
-  { name: 'CONTACT US', href: '#contact' },
   { name: 'FAQ', href: '#faq' },
+  { name: 'CONTACT US', href: '#contact' },
 ];
 
 export default function Header() {

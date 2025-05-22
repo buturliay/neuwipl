@@ -70,7 +70,7 @@ export default function CalendarSection() {
   );
 
   return (
-    <section id="calendar" className="w-full px-6 py-20 scroll-mt-24">
+    <section id="calendar" className="w-full px-6 py-20 scroll-mt-24 bg-pink-100">
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-between items-center mb-6">
           <button onClick={handlePrev} className="text-pink-600 font-semibold hover:underline">
@@ -100,7 +100,7 @@ export default function CalendarSection() {
             return (
               <div
                 key={index}
-                className={`min-h-[100px] p-2 border border-pink-300 rounded-md text-sm text-left ${
+                className={`min-h-[100px] p-2 rounded-md text-sm text-left ${
                   date ? 'bg-white' : 'bg-transparent'
                 }`}
               >
