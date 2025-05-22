@@ -4,6 +4,8 @@ import Join from "@/components/Join";
 import Eboard from "@/components/Eboard";
 import Calendar from "@/components/Calendar";
 import Contact from "@/components/Contact";
+import Faq from "@/components/faq"
+import Socials from "@/components/Socials"
 
 export default function HomePage() {
   return (
@@ -13,7 +15,9 @@ export default function HomePage() {
       <Join />
       <Eboard />
       <Calendar />
+      <Faq />
       <Contact />
+      <Socials />
     </main>
   );
 }
