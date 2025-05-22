@@ -17,26 +17,28 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white py-4 px-4">
-      {/* Top Bar: Title + Menu Icon */}
-      <div className="flex items-center justify-between md:block relative">
+    <header className="w-full bg-white py-6 px-4">
+      {/* Title + Mobile Menu Icon */}
+      <div className="flex flex-col md:block items-center text-center">
         {/* Title */}
-        <div className="w-full text-center text-pink-600 text-2xl md:text-4xl mt-4 font-bold">
+        <div className="text-pink-600 text-2xl md:text-4xl font-bold">
           Women In Pre-Law Society at Northeastern University
         </div>
 
-        {/* Mobile Menu Icon (right side) */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="absolute right-0 top-1/2 -translate-y-1/2 md:hidden text-pink-600"
-          aria-label="Toggle navigation"
-        >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Menu Icon - now below title */}
+        <div className="mt-4 md:hidden">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-pink-600"
+            aria-label="Toggle navigation"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex justify-center flex-wrap gap-4 text-m font-medium text-pink-700 pt-4">
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex justify-center flex-wrap gap-4 text-m font-medium text-pink-700 pt-6">
         {navItems.map(({ name, href }) => (
           <Link
             key={name}
@@ -48,9 +50,9 @@ export default function Header() {
         ))}
       </nav>
 
-      {/* Mobile Nav Dropdown */}
+      {/* Mobile Navigation Dropdown */}
       {menuOpen && (
-        <div className="flex flex-col items-center gap-4 pt-4 md:hidden text-pink-700 text-base font-medium">
+        <div className="flex flex-col items-center gap-4 pt-6 md:hidden text-pink-700 text-base font-medium">
           {navItems.map(({ name, href }) => (
             <Link
               key={name}
