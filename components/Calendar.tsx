@@ -31,12 +31,16 @@ export default function CalendarSection() {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
 
   useEffect(() => {
+    
     const fetchEvents = async () => {
       const res = await fetch('/api/events');
       const data = await res.json();
       setEvents(data);
+      console.log("Fetched events:", data);
+
     };
     fetchEvents();
+    
   }, []);
 
   const handlePrev = () => {
@@ -72,7 +76,7 @@ export default function CalendarSection() {
           <button onClick={handlePrev} className="text-pink-600 font-semibold hover:underline">
             ← Previous
           </button>
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 uppercase">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 uppercase">
             {monthName} {currentYear}
           </h2>
           <button onClick={handleNext} className="text-pink-600 font-semibold hover:underline">
